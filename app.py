@@ -65,4 +65,3 @@ if st.button("🔮 Evaluar Supervivencia", use_container_width=True):
         st.balloons()
     else:
         st.error(f"🔴 **No sobrevive.** El pasajero tiene solo un **{probabilidad:.1f}%** de probabilidad de salvarse.")
-
