@@ -62,9 +62,10 @@ with col1:
     edad = st.slider("Edad (en anos):", 1, 80, 30)
     clase = st.selectbox(
         "Clase de Boleto (Socioeconomico):",
-        ,
+        [1, 2, 3],
         format_func=lambda x: f"{x} Clase",
     )
+
 
 with col2:
     tarifa = st.slider("Precio del Boleto (Tarifa en libras):", 0, 500, 32)
