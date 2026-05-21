@@ -1,0 +1,8 @@
+Actúa como un estudiante de ciencia de datos y genera el código para una aplicación interactiva en Streamlit. El aplicativo debe desplegar un modelo de Machine Learning entrenado previamente con el dataset del Titanic mediante la carga de dos archivos en formato .pkl (modelo_rf.pkl para Random Forest y modelo_lr.pkl para Regresión Logística) almacenados en una subcarpeta interna llamada "modelos". 
+
+La interfaz debe cumplir con los siguientes requerimientos obligatorios:
+1. No debe incluir ningún tipo de emoji o emoticón en textos ni etiquetas.
+2. Debe mostrar de forma clara en la barra lateral los datos del alumno: Nombre: Edwin Caballero, Código ISIL: 76621458, junto con un enlace de texto hacia el cuaderno de Google Colab en modo lector.
+3. Debe permitir al usuario seleccionar mediante un componente interactivo cuál de los dos modelos desea utilizar para la predicción.
+4. Debe recopilar en español los datos de un pasajero ficticio (Género, Edad, Clase de Boleto, Tarifa, Hermanos/Cónyuges y Padres/Hijos a bordo) usando elementos como st.radio, st.slider y st.number_input.
+5. Al presionar un botón de predicción, debe generar un DataFrame con las columnas correctas ("Pclass", "Sex", "Age", "SibSp", "Parch", "Fare"), enviarlo al modelo seleccionado y mostrar de forma estética el resultado de supervivencia calculando adecuadamente el porcentaje de probabilidad indexado ([0][1] para sobrevivientes y [0][0] para fallecidos) para evitar fallos de sintaxis en el formato de salida.
