@@ -91,14 +91,15 @@ if st.button("Ejecutar Prediccion de Supervivencia", use_container_width=True):
     prediccion = modelo_activo.predict(pasajero)
     probabilidad = modelo_activo.predict_proba(pasajero)
 
-    # Extraer probabilidad de la clase positiva (sobrevivir)
-    porcentaje = probabilidad * 100
-
     if prediccion == 1:
+        # Extrae la probabilidad de sobrevivir (posicion 1)
+        porcentaje = probabilidad[0][1] * 100
         st.success(
             f"El pasajero sobrevive. Segun el modelo {opcion_modelo}, tiene un {porcentaje:.1f}% de probabilidad de salvarse."
         )
     else:
+        # Extrae la probabilidad de fallecer (posicion 0)
+        porcentaje = probabilidad[0][0] * 100
         st.error(
             f"El pasajero no sobrevive. Segun el modelo {opcion_modelo}, tiene un {porcentaje:.1f}% de probabilidad de fallecer."
         )
